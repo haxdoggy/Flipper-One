@@ -1,0 +1,76 @@
+name: "🧪 Submit a project"
+description: Suggest an app, tool, emulator, firmware, module or guide for Flipper One.
+title: "[Project] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing! 🙌 Projects are reviewed against the rules in [CONTRIBUTING.md](https://github.com/haxdoggy/Flipper-One/blob/main/CONTRIBUTING.md).
+        Self-promotion is welcome, as long as it's your own real, working project.
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+      placeholder: e.g. Flipper One KVM
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Repository, project page or video.
+      placeholder: https://github.com/...
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Apps & tools
+        - Companions & remote control
+        - Emulators, VMs & labs
+        - OS & FlipCTL experiments
+        - Firmware forks
+        - Hardware, modules & cases
+        - Other RK3576 boards & DIY
+        - Local AI / NPU
+        - Guide, video or article
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What does it do?
+      description: One or two sentences, in your own words.
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: GitHub handle or name of the creator.
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Works on Flipper OS today (SBC, VM or emulator)
+        - Works in simulation only
+        - Proof of concept / early
+        - Waiting for hardware
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: The project has a README that explains what it does.
+          required: true
+        - label: The source is public. It doesn't ship prebuilt binaries from unverified sources.
+          required: true
+        - label: It's meant for legal use on devices and networks you're authorized to test.
+          required: true

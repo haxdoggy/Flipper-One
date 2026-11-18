@@ -1,0 +1,33 @@
+name: "📰 News or spec update"
+description: Report a new announcement, a campaign milestone, or a spec, price or date that changed.
+title: "[Update] "
+labels: ["update"]
+body:
+  - type: dropdown
+    id: section
+    attributes:
+      label: Which part of the page?
+      options:
+        - Latest news
+        - Launch tracker
+        - Timeline
+        - Specs
+        - Official resources or repositories
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What changed?
+      description: What the page says now, and what it should say.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Link to the Developer Portal, the Flipper blog, the Kickstarter page or a reputable article.
+      placeholder: https://docs.flipper.net/one/...
+    validations:
+      required: true
