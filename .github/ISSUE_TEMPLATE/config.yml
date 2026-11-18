@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Flipper One Developer Portal
+    url: https://docs.flipper.net/one
+    about: Official docs, dev logs and open tasks from Flipper Devices.
+  - name: Flipper Devices Discord
+    url: https://discord.com/invite/flipper
+    about: Questions about the device itself are best asked in the official community.
